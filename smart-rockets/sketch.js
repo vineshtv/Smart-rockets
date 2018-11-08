@@ -1,20 +1,20 @@
 //let rockets = [];
 var popSize = 25;
-var lifeSpan = 500;
+var lifeSpan = 300;
 var age = 0;
 var population;
 var lifeP;
 var target;
 var maxForce = 0.2;
 
-var rx = 300;
+var rx = 200;
 var ry = 300;
-var rw = 400;
+var rw = 200;
 var rh = 10;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight - 50);
-	//createCanvas(600, 600);
+	//createCanvas(windowWidth, windowHeight - 50);
+	createCanvas(600, 500);
     background(0);
     target = createVector(width/2, 150);
     console.log(target.x, target.y);
