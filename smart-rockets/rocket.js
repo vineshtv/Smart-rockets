@@ -49,7 +49,9 @@ class Rocket {
     update() {
         //console.log(target);
         var d = dist(target.x, target.y, this.position.x, this.position.y)
-        
+       
+        //If the distance of the rocket from the target is less than 10, then consider it has reached the
+        //target.
         if (d < 10){
             this.completed = true;
             this.position = target.copy();
@@ -67,12 +69,13 @@ class Rocket {
             this.crashed = true;
         }
         
-        if(this.position.y < 0 || this.position.y > height) {
+        if(/*this.position.y < 0 ||*/ this.position.y > height) {
             this.crashed = true;
         }
         this.applyForce(this.dna.genes[age]);
         //this.count++;
         
+        // The velocity accelaration gig
         if(!this.completed && !this.crashed){
             this.velocity.add(this.acceleration);
             this.position.add(this.velocity);
